@@ -2,7 +2,7 @@ def selection_sort(array):
     for i in range(len(array)):
         min = 9999
         # 매번 가장 작은 수를 구한다
-        for j in range(i, 10):
+        for j in range(i, len(array)):
             if min > array[j]:
                 min = array[j]
                 idx = j
