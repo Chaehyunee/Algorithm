@@ -5,13 +5,21 @@ import time
 start_time = time.time()
 # 코드 시작
 
-x, y = map(str, input().split())
+name_list = []
+index_map = {}
+N, M = map(int, input().split())
 
-def rev(str_num):
-    str_num = str_num[::-1]
-    return int(str_num)
+for n in range(N):
+    name = input()
+    name_list.append(name)
+    index_map[name] = n + 1
 
-print(rev(str(rev(x)+rev(y))))
+for m in range(M):
+    q = input()
+    if q.isdigit():
+        print(name_list[int(q)-1])
+    else:
+        print(index_map[q])
 
 # 코드 끝
 end_time = time.time()
